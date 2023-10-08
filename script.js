@@ -63,3 +63,5 @@ form.addEventListener('submit', function (e) {
     .setPopupContent('Workout')
     .openPopup();
 });
+
+inputType.addEventListener('change', function () {});
