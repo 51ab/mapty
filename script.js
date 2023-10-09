@@ -14,6 +14,8 @@ const inputElevation = document.querySelector('.form__input--elevation');
 let map, mapEvent;
 
 class App {
+  #map;
+  #mapEvent;
   constructor() {
     this._getPosition();
   }
