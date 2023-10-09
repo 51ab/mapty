@@ -45,6 +45,7 @@ class App {
   _toggleElevationField() {}
   _newWorkout() {}
 }
+const app = new App();
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
