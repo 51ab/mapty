@@ -18,6 +18,7 @@ class App {
   #mapEvent;
   constructor() {
     this._getPosition();
+    form.addEventListener('submit', this._newWorkout.bind(this));
   }
   _getPosition() {
     if (navigator.geolocation) {
@@ -62,8 +63,8 @@ form.addEventListener('submit', function (e) {
     inputElevation =
       '';
 
-  console.log(mapEvent);
-  const { lat, lng } = mapEvent.latlng;
+  //console.log(mapEvent);
+  const { lat, lng } = this.mapEvent.latlng;
   L.marker([lat, lng])
     .addTo(map)
     .bindPopup(
