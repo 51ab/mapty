@@ -66,7 +66,7 @@ form.addEventListener('submit', function (e) {
   //console.log(mapEvent);
   const { lat, lng } = this.mapEvent.latlng;
   L.marker([lat, lng])
-    .addTo(map)
+    .addTo(this.map)
     .bindPopup(
       L.popup({
         maxWidth: 250,
