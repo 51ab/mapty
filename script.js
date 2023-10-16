@@ -22,7 +22,8 @@ class Workout {
 }
 
 let map, mapEvent;
-
+class Cycling extends Workout {}
+class Running extends Workout {}
 class App {
   #map;
   #mapEvent;
