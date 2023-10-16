@@ -22,8 +22,13 @@ class Workout {
 }
 
 let map, mapEvent;
+class Running extends Workout {
+  constructor(coords, distance, duration, cadence) {
+    super(coords, distance, duration);
+  }
+}
 class Cycling extends Workout {}
-class Running extends Workout {}
+
 class App {
   #map;
   #mapEvent;
