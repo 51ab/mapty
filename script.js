@@ -94,6 +94,8 @@ class App {
     const duration = +inputDuration.value;
     if (inputType === 'running') {
       const cadence = +inputCadence.value;
+      if (!Number.isFinite(distance))
+        return alert('Inputs have to be a positive number');
     }
     if (inputType === 'cycling') {
       const elevation = +inputElevation.value;
