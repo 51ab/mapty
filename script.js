@@ -89,11 +89,6 @@ class App {
   }
   _newWorkout(e) {
     e.preventDefault();
-    inputDistance.value =
-      inputCadence.value =
-      inputDuration.value =
-      inputElevation =
-        '';
 
     //console.log(mapEvent);
     const { lat, lng } = this.#mapEvent.latlng;
@@ -110,6 +105,11 @@ class App {
       )
       .setPopupContent('Workout')
       .openPopup();
+    inputDistance.value =
+      inputCadence.value =
+      inputDuration.value =
+      inputElevation =
+        '';
   }
 }
 const app = new App();
