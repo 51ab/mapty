@@ -89,6 +89,9 @@ class App {
   }
   _newWorkout(e) {
     e.preventDefault();
+    const type = inputType.value;
+    const distance = +inputDistance.value;
+    const duration = +inputDuration.value;
 
     //console.log(mapEvent);
     const { lat, lng } = this.#mapEvent.latlng;
