@@ -92,7 +92,12 @@ class App {
     const type = inputType.value;
     const distance = +inputDistance.value;
     const duration = +inputDuration.value;
-
+    if (inputType === 'running') {
+      const cadence = +inputCadence.value;
+    }
+    if (inputType === 'cycling') {
+      const elevation = +inputElevation.value;
+    }
     //console.log(mapEvent);
     const { lat, lng } = this.#mapEvent.latlng;
     L.marker([lat, lng])
