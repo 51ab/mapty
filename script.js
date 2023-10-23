@@ -88,6 +88,8 @@ class App {
     inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
   }
   _newWorkout(e) {
+    const vaalidInputs = (...inputs) =>
+      inputs.every(inp => Number.isFinite(inp));
     e.preventDefault();
     const type = inputType.value;
     const distance = +inputDistance.value;
