@@ -97,9 +97,9 @@ class App {
     if (inputType === 'running') {
       const cadence = +inputCadence.value;
       if (
-        !Number.isFinite(distance) ||
-        !Number.isFinite(cadence) ||
-        !Number.isFinite(duration)
+       // !Number.isFinite(distance) ||
+       // !Number.isFinite(cadence) ||
+       // !Number.isFinite(duration)
       )
         return alert('Inputs have to be a positive number');
     }
