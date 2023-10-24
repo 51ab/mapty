@@ -88,7 +88,7 @@ class App {
     inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
   }
   _newWorkout(e) {
-    const vaalidInputs = (...inputs) =>
+    const validInputs = (...inputs) =>
       inputs.every(inp => Number.isFinite(inp));
     e.preventDefault();
     const type = inputType.value;
@@ -100,12 +100,14 @@ class App {
         // !Number.isFinite(distance) ||
         // !Number.isFinite(cadence) ||
         // !Number.isFinite(duration)
-        !vaalidInputs(distance, cadence, duration)
+        !validInputs(distance, cadence, duration)
       )
         return alert('Inputs have to be a positive number');
     }
     if (inputType === 'cycling') {
       const elevation = +inputElevation.value;
+      if (!validInputs(distance, duration, elevation))
+        return alert('Inputs have to be positive number');
     }
     //console.log(mapEvent);
     const { lat, lng } = this.#mapEvent.latlng;
