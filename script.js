@@ -101,7 +101,7 @@ class App {
         // !Number.isFinite(distance) ||
         // !Number.isFinite(cadence) ||
         // !Number.isFinite(duration)
-        !validInputs(distance, cadence, duration)
+        !validInputs(distance, cadence, duration) || !allPositive(distance, cadence, duration);
       )
         return alert('Inputs have to be a positive number');
     }
