@@ -101,13 +101,17 @@ class App {
         // !Number.isFinite(distance) ||
         // !Number.isFinite(cadence) ||
         // !Number.isFinite(duration)
-        !validInputs(distance, cadence, duration) || !allPositive(distance, cadence, duration);
+        !validInputs(distance, cadence, duration) ||
+        !allPositive(distance, cadence, duration)
       )
         return alert('Inputs have to be a positive number');
     }
     if (inputType === 'cycling') {
       const elevation = +inputElevation.value;
-      if (!validInputs(distance, duration, elevation))
+      if (
+        !validInputs(distance, duration, elevation) ||
+        !allPositive(distance, elevation, duration)
+      )
         return alert('Inputs have to be positive number');
     }
     //console.log(mapEvent);
