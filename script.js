@@ -105,6 +105,7 @@ class App {
         !allPositive(distance, cadence, duration)
       )
         return alert('Inputs have to be a positive number');
+      const workout = new Running([lat, lng], distance, duration, cadence);
     }
     if (inputType === 'cycling') {
       const elevation = +inputElevation.value;
