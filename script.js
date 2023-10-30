@@ -118,6 +118,7 @@ class App {
       )
         return alert('Inputs have to be positive number');
     }
+    workout = new Cycling([lat, lng], distance, durtion, elevation);
     this.#workouts.push(workout);
     //console.log(mapEvent);
 
