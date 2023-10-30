@@ -96,6 +96,7 @@ class App {
     const type = inputType.value;
     const distance = +inputDistance.value;
     const duration = +inputDuration.value;
+    const { lat, lng } = this.#mapEvent.latlng;
     if (inputType === 'running') {
       const cadence = +inputCadence.value;
       if (
@@ -118,7 +119,7 @@ class App {
     }
     this.#workouts.push(workout);
     //console.log(mapEvent);
-    const { lat, lng } = this.#mapEvent.latlng;
+
     L.marker([lat, lng])
       .addTo(this.#map)
       .bindPopup(
