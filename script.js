@@ -107,7 +107,6 @@ class App {
       )
         return alert('Inputs have to be a positive number');
       const workout = new Running([lat, lng], distance, duration, cadence);
-      this.#workouts.push(workout);
     }
     if (inputType === 'cycling') {
       const elevation = +inputElevation.value;
@@ -117,6 +116,7 @@ class App {
       )
         return alert('Inputs have to be positive number');
     }
+    this.#workouts.push(workout);
     //console.log(mapEvent);
     const { lat, lng } = this.#mapEvent.latlng;
     L.marker([lat, lng])
