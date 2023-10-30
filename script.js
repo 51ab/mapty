@@ -120,6 +120,7 @@ class App {
     }
     workout = new Cycling([lat, lng], distance, durtion, elevation);
     this.#workouts.push(workout);
+    console.log(workout);
     //console.log(mapEvent);
 
     L.marker([lat, lng])
