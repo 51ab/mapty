@@ -97,6 +97,7 @@ class App {
     const distance = +inputDistance.value;
     const duration = +inputDuration.value;
     const { lat, lng } = this.#mapEvent.latlng;
+    let workout;
     if (inputType === 'running') {
       const cadence = +inputCadence.value;
       if (
@@ -107,7 +108,7 @@ class App {
         !allPositive(distance, cadence, duration)
       )
         return alert('Inputs have to be a positive number');
-      const workout = new Running([lat, lng], distance, duration, cadence);
+      workout = new Running([lat, lng], distance, duration, cadence);
     }
     if (inputType === 'cycling') {
       const elevation = +inputElevation.value;
