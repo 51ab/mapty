@@ -123,6 +123,13 @@ class App {
     console.log(workout);
     //console.log(mapEvent);
 
+    inputDistance.value =
+      inputCadence.value =
+      inputDuration.value =
+      inputElevation =
+        '';
+  }
+  renderWorkoutMarker() {
     L.marker([lat, lng])
       .addTo(this.#map)
       .bindPopup(
@@ -131,16 +138,11 @@ class App {
           minWidth: 100,
           autoClose: false,
           closeOnClick: false,
-          className: 'running-popup',
+          className: `${type}-popup`,
         })
       )
       .setPopupContent('Workout')
       .openPopup();
-    inputDistance.value =
-      inputCadence.value =
-      inputDuration.value =
-      inputElevation =
-        '';
   }
 }
 const app = new App();
