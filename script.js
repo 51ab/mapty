@@ -121,6 +121,7 @@ class App {
     workout = new Cycling([lat, lng], distance, durtion, elevation);
     this.#workouts.push(workout);
     console.log(workout);
+    this.renderWorkoutMarker(workout);
     //console.log(mapEvent);
 
     inputDistance.value =
@@ -129,8 +130,8 @@ class App {
       inputElevation =
         '';
   }
-  renderWorkoutMarker() {
-    L.marker([lat, lng])
+  renderWorkoutMarker(workout) {
+    L.marker(workout.coords)
       .addTo(this.#map)
       .bindPopup(
         L.popup({
@@ -141,7 +142,7 @@ class App {
           className: `${type}-popup`,
         })
       )
-      .setPopupContent('Workout')
+      .setPopupContent(workout.distance)
       .openPopup();
   }
 }
