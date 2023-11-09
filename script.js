@@ -124,6 +124,7 @@ class App {
     this.#workouts.push(workout);
     console.log(workout);
     this.renderWorkoutMarker(workout);
+    this._renderWorkout(workout);
     //console.log(mapEvent);
 
     inputDistance.value =
@@ -147,6 +148,7 @@ class App {
       .setPopupContent(workout.distance)
       .openPopup();
   }
+  _renderWorkout(workout);
 }
 const app = new App();
 
