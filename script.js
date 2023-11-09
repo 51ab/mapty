@@ -148,7 +148,7 @@ class App {
       .setPopupContent(workout.distance)
       .openPopup();
   }
-  _renderWorkout(workout);
+  _renderWorkout(workout) {}
 }
 const app = new App();
 
