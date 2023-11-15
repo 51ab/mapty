@@ -12,7 +12,7 @@ class Workout {
   }
   setDescription(){
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
+    this.description
   }
 }
 
@@ -152,7 +152,7 @@ class App {
       .openPopup();
   }
   _renderWorkout(workout) {
-    const html = `<li class="workout workout--${workout.name}" data-id="${
+    const html = `<li class="workout workout--${workout.type}" data-id="${
       workout.id
     }">
     <h2 class="workout__title">Running on April 14</h2>
