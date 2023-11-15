@@ -9,7 +9,7 @@ class Workout {
     this.coords = coords;
     this.distance = distance;
     this.duration = duration;
-    this._setDescription();
+    
   }
   _setDescription(){
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -25,6 +25,7 @@ class Running extends Workout {
     super(coords, distance, duration);
     this.cadence = cadence;
     this.calcPace();
+    this._setDescription();
   }
   calcPace() {
     this.pace = this.duration / this.distance;
@@ -37,6 +38,7 @@ class Cycling extends Workout {
     super(coords, distance, duration);
     this.elevationGain = elevationGain;
     this.calcSpeed();
+    this._setDescription();
   }
   calcSpeed() {
     this.speed = this.distance / this.duration;
