@@ -1,7 +1,6 @@
 'use strict';
 
 // prettier-ignore
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 class Workout {
   date = new Date();
@@ -10,6 +9,10 @@ class Workout {
     this.coords = coords;
     this.distance = distance;
     this.duration = duration;
+  }
+  setDescription(){
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
   }
 }
 
