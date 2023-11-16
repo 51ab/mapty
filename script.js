@@ -88,7 +88,7 @@ class App {
     }).addTo(this.#map);
     this.#map.on('click', this._showForm.bind(this));
   }
-  _showForm() {
+  _showForm(mapE) {
     this.#mapEvent = mapE;
     form.classList.remove('hidden');
     inputDistance.focus();
